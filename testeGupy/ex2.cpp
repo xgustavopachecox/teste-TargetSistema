@@ -21,11 +21,18 @@ ex2::ex2(const ex2& orig) {
 ex2::~ex2() {
 }
 
-bool Fibonacci(int num, int a, int b) {
-    if (num== a || num == b) {
+
+bool ex2::Fibonacci(int num, int a, int b) {
+    if (num == 0)
         return true;
-    } else if (num < b) {
+    int c = a + b;
+    if (c == num)
+        return true;
+    if (c > num)
         return false;
-    }
-    return Fibonacci(num, b, a + b);
+    return Fibonacci(num, b, c);
+}
+
+void ex2::metodo(){
+    
 }

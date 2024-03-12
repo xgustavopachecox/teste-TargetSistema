@@ -22,9 +22,15 @@ using namespace std;
 int main(int argc, char** argv) {
     ex2 obj;
     int num;
-    cout << "Digite um numero: ";
-    cin >> num;
-    cout << num << obj.Fibonacci(num,0,1) ? " faz parte da sequencia de Fibonacci." : " nao faz parte da sequencia de Fibonacci.";
+
+    while (true) {
+        cout << "Digite um numero (ou -1 para sair): ";
+        cin >> num;
+        if (num == -1)
+            break;
+        cout << num << (obj.Fibonacci(num, 0, 1) ? " faz parte da sequencia de Fibonacci." : " nao faz parte da sequencia de Fibonacci.") << endl;
+    }
+
     return 0;
 }
 

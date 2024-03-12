@@ -19,7 +19,8 @@ public:
     ex2(const ex2& orig);
     virtual ~ex2();
     
-    bool Fibonacci(int num, int a = 0, int b = 1);
+    bool Fibonacci(int num, int a, int b);
+    void metodo();
 private:
 
 };
